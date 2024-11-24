@@ -3,11 +3,11 @@ local block_size = 10000000  -- Block size per thread for unique IDs
 function thread_init()
     -- Establish a secure database connection for each thread only once
     drv = sysbench.sql.driver()
-    con = drv:connect("host=tidb.hzgtyt1hqvvt.clusters.tidb-cloud.com", 
-                      "user=root", 
-                      "password=rootadmin", 
-                      "database=transaction_demo", 
-                      "ssl-ca=/home/m/Documents/code/costco/ca.cer")  -- Path to your CA certificate
+    con = drv:connect("host=tidb.hzzzzzzzzz.clusters.tidb-cloud.com", -- Replace with your TiDB instance hostname or IP address
+                      "user=root", -- Replace with your database username
+                      "password=rootadmin", -- Replace with your database password
+                      "database=transaction_demo", -- Replace with your target database name
+                      "ssl-ca=/home/m/Documents/code/ca.cer")  -- Replace with the path to your SSL CA certificate
 
      -- Set starting point for each thread's counter to its unique range
     thread_member_counter = sysbench.tid * block_size

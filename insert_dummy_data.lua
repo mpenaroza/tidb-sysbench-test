@@ -8,11 +8,11 @@ function thread_init()
   -- Establish a database connection for each thread
   drv = sysbench.sql.driver()
   con = drv:connect({
-    host = "tidb.hzgtyt1hqvvt.clusters.tidb-cloud.com",
-    user = "root",
-    password = "rootadmin",
-    database = "transaction_demo",
-    ssl_ca = "/home/m/Documents/code/costco/ca.cer"
+    host = "tidb.hzgtyt1hqvvt.clusters.tidb-cloud.com", -- Replace with your TiDB instance hostname or IP address
+    user = "root", -- Replace with your database username
+    password = "rootadmin", -- Replace with your database password
+    database = "transaction_demo", -- Replace with your target database name
+    ssl_ca = "/home/m/Documents/code/costco/ca.cer" -- Replace with the path to your SSL CA certificate
   })
   -- Calculate unique starting IDs for each thread based on the thread ID
   local thread_id = sysbench.tid  -- Access thread-specific ID
