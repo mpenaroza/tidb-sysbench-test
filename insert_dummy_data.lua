@@ -12,7 +12,7 @@ function thread_init()
     user = "root", -- Replace with your database username
     password = "rootadmin", -- Replace with your database password
     database = "transaction_demo", -- Replace with your target database name
-    ssl_ca = "/home/m/Documents/code/costco/ca.cer" -- Replace with the path to your SSL CA certificate
+    ssl_ca = "/home/m/Documents/code/ca.cer" -- Replace with the path to your SSL CA certificate
   })
   -- Calculate unique starting IDs for each thread based on the thread ID
   local thread_id = sysbench.tid  -- Access thread-specific ID
